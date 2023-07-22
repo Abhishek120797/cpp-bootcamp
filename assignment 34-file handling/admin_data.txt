@@ -1,0 +1,13 @@
+
+104, Emily Williams, San Francisco, Admin, 555-2468, 32
+108, Olivia Miller, Atlanta, Admin, 555-9512, 31
+112, Sophia Garcia, Denver, Admin, 555-8024, 30
+116, Mia Lopez, Detroit, Admin, 555-3570, 31
+120, Charlotte Carter, San Antonio, Admin, 555-8021, 29
+124, Harper Stewart, Raleigh, Admin, 555-7892, 28
+128, Scarlett Turner, Memphis, Admin, 555-4682, 29
+132, Mateo Butler, Sacramento, Admin, 555-6893, 28
+136, Charles Howard, Wichita, Admin, 555-8022, 29
+140, Daniel Brooks, Cleveland, Admin, 555-4685, 29
+144, Lily Bennett, Phoenix, Admin, 555-6895, 28
+148, Harper Ramirez, Dallas, Admin, 555-8027, 29

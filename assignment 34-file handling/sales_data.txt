@@ -1,0 +1,13 @@
+101, John Doe, New York City, Sales, 555-1234, 30
+105, Robert Brown, Seattle, Sales, 555-1357, 29
+109, James Wilson, Houston, Sales, 555-2468, 28
+113, Benjamin Thompson, San Diego, Sales, 555-8642, 29
+117, Ethan Gonzalez, Minneapolis, Sales, 555-6891, 28
+121, Liam Torres, Las Vegas, Sales, 555-1359, 27
+125, Elijah Bell, Charlotte, Sales, 555-2469, 26
+129, Carter Ward, Milwaukee, Sales, 555-9136, 27
+133, Sofia Barnes, Albuquerque, Sales, 555-9510, 26
+137, Grace Ward, Tampa, Sales, 555-9516, 27
+141, Chloe Price, Kansas City, Sales, 555-9138, 27
+145, Henry Green, Seattle, Sales, 555-9518, 26
+149, Scarlett Long, New York City, Sales, 555-9139, 27

@@ -1,0 +1,50 @@
+101, John Doe, New York City, Sales, 555-1234, 30
+102, Jane Smith, Los Angeles, Production, 555-5678, 28
+103, Michael Johnson, Chicago, IT, 555-9876, 35
+104, Emily Williams, San Francisco, Admin, 555-2468, 32
+105, Robert Brown, Seattle, Sales, 555-1357, 29
+106, Jennifer Davis, Miami, Production, 555-4680, 27
+107, William Lee, Dallas, IT, 555-7530, 33
+108, Olivia Miller, Atlanta, Admin, 555-9512, 31
+109, James Wilson, Houston, Sales, 555-2468, 28
+110, Emma Anderson, Boston, Production, 555-7890, 26
+111, Alexander Martinez, Washington D.C., IT, 555-3579, 34
+112, Sophia Garcia, Denver, Admin, 555-8024, 30
+113, Benjamin Thompson, San Diego, Sales, 555-8642, 29
+114, Isabella Rodriguez, Phoenix, Production, 555-9135, 27
+115, Joseph Hernandez, Philadelphia, IT, 555-4652, 35
+116, Mia Lopez, Detroit, Admin, 555-3570, 31
+117, Ethan Gonzalez, Minneapolis, Sales, 555-6891, 28
+118, Ava Moore, Portland, Production, 555-9513, 26
+119, Noah Rivera, Orlando, IT, 555-4681, 33
+120, Charlotte Carter, San Antonio, Admin, 555-8021, 29
+121, Liam Torres, Las Vegas, Sales, 555-1359, 27
+122, Amelia Perez, Nashville, Production, 555-9514, 35
+123, Lucas Collins, Austin, IT, 555-8643, 30
+124, Harper Stewart, Raleigh, Admin, 555-7892, 28
+125, Elijah Bell, Charlotte, Sales, 555-2469, 26
+126, Evelyn Mitchell, Indianapolis, Production, 555-1358, 34
+127, Aiden Cook, Baltimore, IT, 555-8023, 31
+128, Scarlett Turner, Memphis, Admin, 555-4682, 29
+129, Carter Ward, Milwaukee, Sales, 555-9136, 27
+130, Riley Bailey, Oklahoma City, Production, 555-3578, 35
+131, Abigail Foster, Louisville, IT, 555-8025, 30
+132, Mateo Butler, Sacramento, Admin, 555-6893, 28
+133, Sofia Barnes, Albuquerque, Sales, 555-9510, 26
+134, Julian Fisher, Omaha, Production, 555-4683, 34
+135, Victoria Simmons, Tulsa, IT, 555-3571, 31
+136, Charles Howard, Wichita, Admin, 555-8022, 29
+137, Grace Ward, Tampa, Sales, 555-9516, 27
+138, Ryan Foster, Cincinnati, Production, 555-1356, 35
+139, Lillian Robinson, Pittsburgh, IT, 555-7893, 31
+140, Daniel Brooks, Cleveland, Admin, 555-4685, 29
+141, Chloe Price, Kansas City, Sales, 555-9138, 27
+142, Sebastian Scott, Charlotte, Production, 555-3573, 35
+143, Harper Adams, San Francisco, IT, 555-8026, 30
+144, Lily Bennett, Phoenix, Admin, 555-6895, 28
+145, Henry Green, Seattle, Sales, 555-9518, 26
+146, Zoey Ward, Boston, Production, 555-4686, 34
+147, Christopher Turner, Washington D.C., IT, 555-3572, 31
+148, Harper Ramirez, Dallas, Admin, 555-8027, 29
+149, Scarlett Long, New York City, Sales, 555-9139, 27
+150, Logan Morris, Los Angeles, Production, 555-1355, 35
