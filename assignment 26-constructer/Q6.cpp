@@ -1,76 +1,46 @@
-#include<iostream>
-#include<string.h>
+#include <iostream>
+#include <string>
 using namespace std;
+
 class Student
 {
-    private:
-        int roll_no,age,std;
-        char name[30];
-    public:
-        Student()
-        {
-            cout<<"Enter roll no : ";
-            cin>>roll_no;
-            cout<<"Enter name : ";
-            cin>>name;
-            cout<<"Enter age : ";
-            cin>>age;
-            cout<<"Enter standard : ";
-            cin>>std;
-        }
-        Student(int x,char n[],int y,int z)
-        {
-            roll_no=x;
-            strcpy(name,n);
-            age=y;
-            std=z;
-        }
-        void set_rollno(int x)
-        {
-            roll_no=x;
-        }
-        void set_name(char n[])
-        {
-            strcpy(name,n);
-        }
-        void set_age(int x)
-        {
-            age=x;
-        }
-        void set_std(int x)
-        {
-            std=x;
-        }
-        void get_rollno()
-        {
-            cout<<roll_no;
-        }
-        void get_name()
-        {
-            cout<<name;
-        }
-        void get_age()
-        {
-            cout<<age;
-        }
-        void get_std()
-        {
-            cout<<std;
-        }
-        void get_student()
-        {
-            get_rollno();cout<<" ";
-            get_name();cout<<" ";
-            get_age();cout<<" ";
-            get_std();
-            cout<<endl;
-        }
+private:
+    int rollNo;
+    string name;
+    int age;
+
+public:
+    Student()
+    {
+        cout << "Enter roll no: ";
+        cin >> rollNo;
+        cin.ignore();
+        cout << "Enter name: ";
+        getline(cin, name);
+        cout << "Enter age: ";
+        cin >> age;
+    }
+    void setRollNo(int n) { rollNo = n; }
+    void setAge(int a) { age = a; }
+    void setName(string s) { name = s; }
+    void setStudent(int n, string s, int a)
+    {
+        rollNo = n;
+        name = s;
+        age = a;
+    }
+    int getRollNo() { return rollNo; }
+    int getAge() { return age; }
+    string getName() { return name; }
+    void displayStudent()
+    {
+        cout << rollNo << " " << name << " " << age << endl;
+    }
 };
 
 int main()
 {
-    Student s1,s2(2,"Abhishek",15,10);
-    s1.get_student();
-    s2.get_student();
+    Student s1;
+    s1.displayStudent();
     return 0;
 }

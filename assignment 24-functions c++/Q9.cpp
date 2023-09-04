@@ -1,24 +1,28 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-void max(int,int);
-void max(float,float);
+
+float max(float, float);
+int max(int, int);
+
 int main()
 {
-    float a,b;
-    cout<<"Enter two numbers : ";
-    cin>>a>>b;
-    max(a,b);
+    int a, b;
+    float c, d;
+    cout << "Enter two float number: ";
+    cin >> a >> b;
+    cout << "max is " << max(a, b) << endl;
+    cout << "Enter two int number ";
+    cin >> c >> d;
+    cout << "max is " << max(c, d) << endl;
     return 0;
 }
-void max(int x,int y)
+
+float max(float num1, float num2)
 {
-    int max;
-    max=x>y?x:y;
-    cout<<"maximum number is "<<max;
+    return num1 >= num2 ? num1 : num2;
 }
-void max(float x,float y)
+
+int max(int num1, int num2)
 {
-    float max;
-    max=x>y?x:y;
-    cout<<"maximum number is "<<max;
+    return num1 >= num2 ? num1 : num2;
 }

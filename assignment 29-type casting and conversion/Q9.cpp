@@ -1,17 +1,18 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
 class Dollar
 {
-    private:
-        int dol;
-    public:
-        Dollar(){ dol=0; }
-        Dollar(int x){ dol=x; }
-        void display()
-        {
-            cout<<"Dollar = "<<dol<<endl;
-        }
+private:
+    int dol;
+
+public:
+    Dollar() { dol = 0; }
+    Dollar(int x) { dol = x; }
+    void display()
+    {
+        cout << "Dollar = " << dol << endl;
+    }
 };
 
 int main()

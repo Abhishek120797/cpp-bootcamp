@@ -1,13 +1,11 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
+
 int main()
 {
-    int num_1,num_2,num_3,avg;
-    cout<<"Enter three numbers : ";
-    cin>>num_1;
-    cin>>num_2;
-    cin>>num_3;
-    avg=(num_1+num_2+num_3)/3;
-    cout<<"average of numbers is "<<avg;
+    int num1, num2, num3;
+    cout << "Enter three numbers: ";
+    cin >> num1 >> num2 >> num3;
+    cout << "average is " << (num1 + num2 + num3) / 3;
     return 0;
 }

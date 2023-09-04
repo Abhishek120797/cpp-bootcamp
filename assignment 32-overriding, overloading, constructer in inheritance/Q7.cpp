@@ -1,46 +1,47 @@
 #include <iostream>
 using namespace std;
 
-class Shape 
+class Shape
 {
-    protected:
-        int width;
-        int height;
+protected:
+    int width;
+    int height;
 
-    public:
-        Shape() 
-        {
-            width = 0;
-            height = 0;
-            cout << "Shape created with default constructor" << endl;
-        }
-        Shape(int w, int h) 
-        {
-            width = w;
-            height = h;
-            cout << "Shape created with parameterized constructor" << endl;
-        }
+public:
+    Shape()
+    {
+        width = 0;
+        height = 0;
+        cout << "Shape created with default constructor" << endl;
+    }
+    Shape(int w, int h)
+    {
+        width = w;
+        height = h;
+        cout << "Shape created with parameterized constructor" << endl;
+    }
 };
 
-class Rectangle : public Shape 
+class Rectangle : public Shape
 {
-    public:
-        Rectangle() : Shape() 
-        {
-            cout << "Rectangle created with default constructor" << endl;
-        }
-        Rectangle(int w, int h) : Shape(w, h) 
-        {
-            cout << "Rectangle created with parameterized constructor" << endl;
-        }
-        void displayArea() 
-        {
-            int area = width * height;
-            cout << "Area of rectangle: " << area << endl;
-        }
+public:
+    Rectangle() : Shape()
+    {
+        cout << "Rectangle created with default constructor" << endl;
+    }
+    Rectangle(int w, int h) : Shape(w, h)
+    {
+        cout << "Rectangle created with parameterized constructor" << endl;
+    }
+    void displayArea()
+    {
+        int area = width * height;
+        cout << "Area of rectangle: " << area << endl;
+    }
 };
 
-int main() {
+int main()
+{
     // Creating a Rectangle object using the parameterized constructor
     Rectangle rect1(5, 7);
 

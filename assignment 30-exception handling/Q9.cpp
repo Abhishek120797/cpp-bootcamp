@@ -2,12 +2,12 @@
 #include <cstring>
 using namespace std;
 
-bool isValidGmailID(const char* gmailID) 
+bool isValidGmailID(const char *gmailID)
 {
-    const char* atSymbol = strchr(gmailID, '@');
-    const char* domain = strstr(gmailID, "gmail.com");
+    const char *atSymbol = strchr(gmailID, '@');
+    const char *domain = strstr(gmailID, "gmail.com");
 
-    if (atSymbol == nullptr || domain == nullptr) 
+    if (atSymbol == nullptr || domain == nullptr)
     {
         throw "Invalid Gmail ID. Gmail ID must contain '@' and 'gmail.com'.";
     }
@@ -15,21 +15,21 @@ bool isValidGmailID(const char* gmailID)
     return true;
 }
 
-int main() 
+int main()
 {
     char gmailID[100];
 
-    try 
+    try
     {
         cout << "Enter a Gmail ID: ";
-        fgets(gmailID,100,stdin);
-        gmailID[strcspn(gmailID,"\n")]='\0';
-        if (isValidGmailID(gmailID)) 
+        fgets(gmailID, 100, stdin);
+        gmailID[strcspn(gmailID, "\n")] = '\0';
+        if (isValidGmailID(gmailID))
         {
             cout << "Gmail ID is valid." << endl;
         }
     }
-    catch (const char* errorMessage)
+    catch (const char *errorMessage)
     {
         cout << "Invalid Gmail ID: " << errorMessage << endl;
     }

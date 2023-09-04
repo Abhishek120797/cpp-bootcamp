@@ -1,11 +1,11 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
+
 int main()
 {
-    int a,b,sum;
-    cout<<"Enter two number : ";
-    cin>>a>>b;
-    sum=a+b;
-    cout<<"sum of "<<a<<" and "<<b<<" is "<<sum;
+    int num1, num2;
+    cout << "Enter two numbers: ";
+    cin >> num1 >> num2;
+    cout << "Sum of " << num1 << " and " << num2 << " is " << num1 + num2;
     return 0;
 }

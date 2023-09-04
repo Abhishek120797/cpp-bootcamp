@@ -1,16 +1,17 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
+
 int main()
 {
-    int num_1,num_2;
-    cout<<"Enter first numbers : ";
-    cin>>num_1;
-    cout<<"Enter second numbers : ";
-    cin>>num_2;
-    num_1=num_1+num_2;
-    num_2=num_1-num_2;
-    num_1=num_1-num_2;
-    cout<<"After swapping"<<endl;
-    cout<<"first number= "<<num_1<<endl<<"second number= "<<num_2;
+    int num1, num2;
+    cout << "Enter number a = ";
+    cin >> num1;
+    cout << "Enter numbe b = ";
+    cin >> num2;
+    num1 = num1 + num2;
+    num2 = num1 - num2;
+    num1 = num1 - num2;
+    cout << "a=" << num1 << endl
+         << "b=" << num2;
     return 0;
 }

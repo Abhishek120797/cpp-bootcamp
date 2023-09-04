@@ -1,43 +1,37 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
+
 class ReverseNumber
 {
-    private:
+private:
     int actual_num;
-    int reverse_num;
-    public:
-    void set()
+    int reverse_num = 0;
+
+public:
+    void set_actual_num(int n) { actual_num = n; }
+    int get_actual_num() { return actual_num; }
+    int get_reverse_num() { return reverse_num; }
+    void reverse_number()
     {
-        cout<<"Enter a number : ";
-        cin>>actual_num;
-    }
-    int getnum()
-    {
-        return actual_num;
-    }
-    int get_reverse_num()
-    {
-        return reverse_num;
-    }
-    void reverse()
-    {
-        int temp=actual_num;
-        reverse_num=0;
-        while(temp!=0)
+        int temp = actual_num;
+        while (temp != 0)
         {
-            int rem;
-            rem=temp%10;
-            temp=temp/10;
-            reverse_num=reverse_num*10+rem;
+            reverse_num = reverse_num * 10 + temp % 10;
+            temp = temp / 10;
         }
     }
 };
+
 int main()
 {
-    ReverseNumber num1;
-    num1.set();
-    num1.reverse();
-    cout<<"actual number = "<<num1.getnum()<<endl
-    <<"reverse number = "<<num1.get_reverse_num();
+    ReverseNumber r1;
+    int num;
+    cout << "Enter a number: ";
+    cin >> num;
+    r1.set_actual_num(num);
+    r1.reverse_number();
+    cout << "Reverse of number " << r1.get_actual_num() << " is "
+         << r1.get_reverse_num();
+
     return 0;
 }

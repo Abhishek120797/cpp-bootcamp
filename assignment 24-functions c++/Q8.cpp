@@ -1,38 +1,43 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
+
 float area(float);
-int area(int,int);
-float area(float,float);
+int area(int, int);
+float area(float, float);
+
 int main()
 {
-    float r,l,b,H,B;
-    cout<<"Enter redius of circle : ";
-    cin>>r;
-    cout<<"area of circle is "<<area(r)<<endl;
-    cout<<"Enter lenght of rectangle :";
-    cin>>l;
-    cout<<"Enter breath of rectangle :";
-    cin>>b;
-    cout<<"area of rectangle is "<<area(l,b)<<endl;
-    cout<<"Enter base of trangle : ";
-    cin>>B;
-    cout<<"Enter height of trangle : ";
-    cin>>H;
-    cout<<"Area of tranglr is "<<area(H,B);
+    float redius, base, height;
+    int length, breath;
+
+    cout << "Enter redius of circle: ";
+    cin >> redius;
+    cout << "Area of circle is " << area(redius) << endl;
+    cout << "Enter length of rectangle: ";
+    cin >> length;
+    cout << "Enter breath of rectanle: ";
+    cin >> breath;
+    cout << "Area of rectangle is " << area(length, breath) << endl;
+    cout << "Enter base of trangle: ";
+    cin >> base;
+    cout << "Enter height of trangle: ";
+    cin >> height;
+    cout << "Area of rectangle is " << area(base, height) << endl;
+
     return 0;
 }
-float area(float x)
-{
 
-    return 3.14*x*x;
+float area(float r)
+{
+    return r * r * 3.14;
 }
-int area(int x,int y)
-{
 
-    return x*y;
+float area(float b, float h)
+{
+    return 0.5 * b * h;
 }
-float area(float x,float y)
-{
 
-    return 0.5*x*y;
+int area(int l, int b)
+{
+    return l * b;
 }

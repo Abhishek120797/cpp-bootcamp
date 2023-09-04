@@ -1,11 +1,11 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
+
 int main()
 {
-    float r,area;
-    cout<<"Enter redius of circle : ";
-    cin>>r;
-    area=3.14*r*r;
-    cout<<"Area of circle is "<<area;
+    float red;
+    cout << "Enter redius of circle: ";
+    cin >> red;
+    cout << "Area of circle is " << red * red * 3.14;
     return 0;
 }

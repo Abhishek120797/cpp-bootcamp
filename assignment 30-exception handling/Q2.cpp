@@ -1,4 +1,4 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
 int main()
@@ -7,10 +7,10 @@ int main()
     {
         throw 'e';
     }
-    catch(char c)
+    catch (char c)
     {
-        cout<<"Exception catch "<<c<<endl;
+        cout << "Exception catch " << c << endl;
     }
-    
+
     return 0;
 }

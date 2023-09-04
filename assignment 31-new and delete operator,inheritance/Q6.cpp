@@ -3,40 +3,40 @@ using namespace std;
 
 class ClassB;
 
-class ClassA 
+class ClassA
 {
-    private:
-        int privateValue;
+private:
+    int privateValue;
 
-    public:
-        ClassA(int value) : privateValue(value) { }
+public:
+    ClassA(int value) : privateValue(value) {}
 
-        int getPrivateValue() { return privateValue; }
+    int getPrivateValue() { return privateValue; }
 
-        friend void ExchangeValues(ClassA &a, ClassB &b);
+    friend void ExchangeValues(ClassA &a, ClassB &b);
 };
 
-class ClassB 
+class ClassB
 {
-    private:
-        int privateValue;
+private:
+    int privateValue;
 
-    public:
-        ClassB(int value) : privateValue(value) { }
+public:
+    ClassB(int value) : privateValue(value) {}
 
-        int getPrivateValue() { return privateValue; }
+    int getPrivateValue() { return privateValue; }
 
-        friend void ExchangeValues(ClassA &a, ClassB &b);
+    friend void ExchangeValues(ClassA &a, ClassB &b);
 };
 
-void ExchangeValues(ClassA &a, ClassB &b) 
+void ExchangeValues(ClassA &a, ClassB &b)
 {
     int temp = a.privateValue;
     a.privateValue = b.privateValue;
     b.privateValue = temp;
 }
 
-int main() 
+int main()
 {
     ClassA objA(10);
     ClassB objB(20);

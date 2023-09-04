@@ -1,11 +1,11 @@
-#include<iostream>
-#include<cstring>
+#include <iostream>
+#include <cstring>
 using namespace std;
 bool isValidEmailId(char *str)
 {
-    for(int i=0;str[i];i++)
+    for (int i = 0; str[i]; i++)
     {
-        if(str[i]=='@')
+        if (str[i] == '@')
             return 1;
     }
     return 0;
@@ -13,21 +13,21 @@ bool isValidEmailId(char *str)
 
 int main()
 {
-    
+
     char email[100];
-    cout<<"Enter e-mail Id: ";
-    fgets(email,100,stdin);
+    cout << "Enter e-mail Id: ";
+    fgets(email, 100, stdin);
     try
     {
-        if(isValidEmailId(email))
-            cout<<"Email id is valid";
+        if (isValidEmailId(email))
+            cout << "Email id is valid";
         else
             throw 'c';
     }
-    catch(char c)
+    catch (char c)
     {
-        cout<<"Email id is not valild !";
+        cout << "Email id is not valild !";
     }
-    
+
     return 0;
 }

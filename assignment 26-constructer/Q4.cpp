@@ -1,25 +1,20 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
+
 class Counter
 {
-    private:
-        static int count;
-    public:
-        Counter()
-        {
-            count++;
-        }
-    static int getcount();
+private:
+    static int count;
 
+public:
+    Counter() { count++; }
+    static int getCount();
 };
 int Counter::count;
-int Counter::getcount()
+int Counter::getCount() { return count; }
+int main()
 {
-    return count;
-}
- int main()
- {
-    Counter c1,c2,c3;
-    cout<<"number of object created of class counter is"<<Counter::getcount();
+    Counter c1, c2, c3;
+    cout << Counter::getCount();
     return 0;
- }
+}

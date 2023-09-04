@@ -1,43 +1,32 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
+
 class Cube
 {
-    private:
-        float side,volume;
-    public:
-        Cube()
-        {
-            cout<<"Enter length of side of cube : ";
-            cin>>side;
-            findvolume();
-        }
-        Cube(float len)
-        {
-            side=len;
-            findvolume();
-        }
-        float get_side()
-        {
-            return side;
-        }
-        void findvolume()
-        {
-            volume=side*side*side;
-        }
-        float get_volume()
-        {
-            return volume;
-        }
+private:
+    float side;
+    float volume;
 
+public:
+    Cube(){};
+    Cube(float l)
+    {
+        side = l;
+    }
+    void setSide(float l) { side = l; }
+    float getSide() { return side; }
+    float getVolume() { return volume; }
+    void cal_volume() { volume = side * side * side; }
 };
 
 int main()
 {
-    Cube c1(5);
-    Cube c2;
-    cout<<"volume of cube is "<<c1.get_volume()<<" whose side length is "
-    <<c1.get_side()<<endl;
-    cout<<"volume of cube is "<<c2.get_volume()<<" whose side length is "
-    <<c2.get_side();
+    Cube c1(5), c2;
+    c2.setSide(6);
+    c1.cal_volume();
+    c2.cal_volume();
+    cout << "vlume of cube is " << c1.getVolume() << " whose side is " << c1.getSide() << endl;
+    cout << "vlume of cube is " << c2.getVolume() << " whose side is " << c2.getSide() << endl;
+
     return 0;
 }

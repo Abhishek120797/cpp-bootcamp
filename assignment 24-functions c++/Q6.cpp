@@ -1,21 +1,24 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-void swap(int &,int &);
+void swap(int &, int &);
 int main()
 {
-    int x,y;
-    cout<<"Enter value of x : ";
-    cin>>x;
-    cout<<"Enter value of y : ";
-    cin>>y;
-    swap(x,y);
-    cout<<"value of x = "<<x<<endl<<"value of y = "<<y;
+    int a, b;
+    cout << "Enter number a= ";
+    cin >> a;
+    cout << "Enter number b= ";
+    cin >> b;
+    swap(a, b);
+    cout << "a = " << a << endl
+         << "b = " << b;
+
     return 0;
 }
-void swap(int &a,int &b)
+
+void swap(int &a, int &b)
 {
     int temp;
-    temp=a;
-    a=b;
-    b=temp;
+    temp = a;
+    a = b;
+    b = temp;
 }

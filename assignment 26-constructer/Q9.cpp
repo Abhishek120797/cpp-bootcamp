@@ -1,51 +1,63 @@
-#include<iostream>
-#include<string.h>
+#include <iostream>
+#include <string>
 using namespace std;
+
 class Bill
 {
-    private:
-        int unit,cunsumer_num;
-        char name[40];
-        float bill;
-    public:
-        Bill()
-        {
-            cout<<"Enter consumer name : ";
-            cin>>name;
-            cout<<"Enter consumer number : ";
-            cin>>cunsumer_num;
-            cout<<"Enter cunsumbtion unit :";
-            cin>>unit;
-        }
-    void set_cunsumer_num(int x){ cunsumer_num=x; }
-    void set_cunsumer_name(char x[]){ strcpy(name,x); }
-    void set_unit(int x){ unit=x; }
-    float get_bill(){ return bill; }
-    int get_unit(){ return unit; }
-    char* get_name(){ return name; }
-    int get_cunsumer_num(){ return cunsumer_num; }
-    void calculatebill()
+private:
+    string consuName;
+    int consuNumber;
+    int unit;
+    float bill;
+
+public:
+    void set_consuname(string name) { consuName = name; }
+    void set_consunumber(int num) { consuNumber = num; }
+    void set_unit(int u)
     {
-        if(unit>200)
-            bill=3*unit;
-        if(unit>=100 && unit<=200)
-             bill=2*unit;
-        if(unit<=100)
-            bill=1.20*unit;
+        unit = u;
+        calculate_bill();
     }
 
+    string get_consuname(string name) { return consuName; }
+    int get_consunumber(int num) { return consuNumber; }
+    int get_unit(int u) { return unit; }
+    float get_bill() { return bill; }
+
+    void input_consumerDetails()
+    {
+        cout << "Enter consumer number: ";
+        cin >> consuNumber;
+        cout << "Enter consumer name: ";
+        cin.ignore();
+        getline(cin, consuName);
+        cout << "Enter unit consumed: ";
+        cin >> unit;
+        calculate_bill();
+    }
+
+    void display_consumerDetails()
+    {
+        cout << consuNumber << " " << consuName << " " << unit << " " << bill << endl;
+    }
+
+    void calculate_bill()
+    {
+        if (unit > 200)
+            bill = 120 + 200 + (unit - 200) * 3;
+        else if (unit > 100)
+            bill = 120 + (unit - 100) * 2;
+        else
+            bill = unit * 1.20;
+    }
 };
 
 int main()
 {
-    Bill cuns1,cuns2;
-    cuns1.calculatebill();
-    cuns2.calculatebill();
-    cout<<"cunsumer number : "<<cuns1.get_cunsumer_num()<<" cunsumer name : "
-    <<cuns1.get_name()<<" cunsumbtion unit : "<<cuns1.get_unit()
-    <<" total bill : "<<cuns1.get_bill()<<endl;
-    cout<<"cunsumer number : "<<cuns2.get_cunsumer_num()<<" cunsumer name : "  
-    <<cuns2.get_name()<<" cunsumbtion unit : "<<cuns2.get_unit()
-    <<" total bill : "<<cuns2.get_bill();
+    Bill b1, b2;
+    b1.input_consumerDetails();
+    b2.input_consumerDetails();
+    b1.display_consumerDetails();
+    b2.display_consumerDetails();
     return 0;
 }

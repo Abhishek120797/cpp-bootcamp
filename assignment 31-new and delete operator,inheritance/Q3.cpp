@@ -1,92 +1,95 @@
-#include<iostream>
-#include<cstring>
-#include<iomanip>
+#include <iostream>
+#include <cstring>
+#include <iomanip>
 using namespace std;
 
 class Mark
 {
-    protected:
-        float math;
-        float phy;
-        float chem;
+protected:
+    float math;
+    float phy;
+    float chem;
 
-    public:
-        void inputMark()
-        {
-            cout<<"Enter marks of Mathematics : ";
-            cin>>math;
-            cout<<"Enter marks of Physics : ";
-            cin>>phy;
-            cout<<"Enter marks of chemestry : ";
-            cin>>chem;
-        }
-        void displaymark()
-        {
-            cout<<"Math = "<<math<<endl;
-            cout<<"physics = "<<phy<<endl;
-            cout<<"chamestry = "<<chem<<endl;
-        }
+public:
+    void inputMark()
+    {
+        cout << "Enter marks of Mathematics : ";
+        cin >> math;
+        cout << "Enter marks of Physics : ";
+        cin >> phy;
+        cout << "Enter marks of chemestry : ";
+        cin >> chem;
+    }
+    void displaymark()
+    {
+        cout << "Math = " << math << endl;
+        cout << "physics = " << phy << endl;
+        cout << "chamestry = " << chem << endl;
+    }
 };
 
-class TotalMark:public Mark
+class TotalMark : public Mark
 {
-    protected:
-        float total;
-    public:
-        void caltotal()
-        {
-            total=math+phy+chem;
-        }
-        void displayToatl()
-        {
-            caltotal();
-            cout<<"Total Marks "<<total<<" / 300"<<endl;
-        }
+protected:
+    float total;
+
+public:
+    void caltotal()
+    {
+        total = math + phy + chem;
+    }
+    void displayToatl()
+    {
+        caltotal();
+        cout << "Total Marks " << total << " / 300" << endl;
+    }
 };
 
-class Percent:public TotalMark
+class Percent : public TotalMark
 {
-    protected:
-        float percent;
-    public:
-        void displayParcent()
-        {
-            caltotal();
-            percent=total*100/300;
-            cout<<"Student got "<<fixed<<setprecision(2)<<percent<<" %";
-        }
+protected:
+    float percent;
+
+public:
+    void displayParcent()
+    {
+        caltotal();
+        percent = total * 100 / 300;
+        cout << "Student got " << fixed << setprecision(2) << percent << " %";
+    }
 };
 
-class Student:public Percent
+class Student : public Percent
 {
-    private:
-        char name[50];
-        int age;
-        int rollNo;
-    public:
-        void setName(const char *str){ strcpy(name,str); }
-        void setAge(int a){ age=a; }
-        void setRollNo(int n){ rollNo=n; }
-        void inputStudentDetails()
-        {
-            cout<<"Enter name : ";
-            fgets(name,50,stdin);
-            name[strcspn(name,"\n")]='\0';
-            cout<<"Enter Age : ";
-            cin>>age;
-            cout<<"Enter Roll No : ";
-            cin>>rollNo;
-            inputMark();
-        }
-        void displayStudent()
-        {
-            cout<<"Name : "<<name<<endl;
-            cout<<"Age : "<<age<<endl;
-            cout<<"Roll No : "<<rollNo<<endl;
-            displaymark();
-            displayToatl();
-            displayParcent();
-        }
+private:
+    char name[50];
+    int age;
+    int rollNo;
+
+public:
+    void setName(const char *str) { strcpy(name, str); }
+    void setAge(int a) { age = a; }
+    void setRollNo(int n) { rollNo = n; }
+    void inputStudentDetails()
+    {
+        cout << "Enter name : ";
+        fgets(name, 50, stdin);
+        name[strcspn(name, "\n")] = '\0';
+        cout << "Enter Age : ";
+        cin >> age;
+        cout << "Enter Roll No : ";
+        cin >> rollNo;
+        inputMark();
+    }
+    void displayStudent()
+    {
+        cout << "Name : " << name << endl;
+        cout << "Age : " << age << endl;
+        cout << "Roll No : " << rollNo << endl;
+        displaymark();
+        displayToatl();
+        displayParcent();
+    }
 };
 
 int main()

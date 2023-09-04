@@ -1,22 +1,25 @@
-#include<iostream>
-#include<fstream>
-#include<string>
+#include <iostream>
+#include <fstream>
+#include <string>
 
 using namespace std;
 
 int main()
 {
-    try{
+    try
+    {
         ofstream file;
         file.open("text.txt");
-        if(!file)
+        if (!file)
         {
             throw string("Error unable to create the file");
         }
-        cout<<"file created succesfully";
+        cout << "file created succesfully";
         file.close();
-    }catch(const string& errorMessage){
-        cerr<<errorMessage<<endl;
-    }   
+    }
+    catch (const string &errorMessage)
+    {
+        cerr << errorMessage << endl;
+    }
     return 0;
 }

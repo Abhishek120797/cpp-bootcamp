@@ -1,42 +1,36 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
 class Time
 {
-    private:
-    int h;
-    int m;
-    int s;
-    public:
-    void set()
+private:
+    int hr;
+    int min;
+    int sec;
+
+public:
+    void set_time(int hour, int minute, int second)
     {
-        cout<<"Enter hour : ";
-        cin>>h;
-        if(h<0)
-            h=-h;
-        cout<<"Enter minutes : ";
-        cin>>m;
-        if(m<0)
-            m=-m;
-        cout<<"Enter second : ";
-        cin>>s;
-        if(s<0)
-            s=-s;
+        hr = hour;
+        min = minute;
+        sec = second;
     }
+
     void display()
     {
-        cout<<h<<" hr "<<m<<" min "<<s<<" sec"<<endl;
+        cout << hr << " hr " << min << " min " << sec << " sec " << endl;
     }
 };
 
 int main()
 {
-    Time t1,t2,t3;
-    t1.set();
-    t2.set();
-    t3.set();
+    Time t1, t2;
+
+    t1.set_time(10, 45, 35);
+    t2.set_time(5, 15, 55);
+
     t1.display();
     t2.display();
-    t3.display();
+
     return 0;
 }

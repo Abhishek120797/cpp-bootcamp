@@ -1,43 +1,62 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
+
 class Box
 {
-    private:
-        float length,breath,height,volume;
-    public:
-        Box()
-        {
-            cout<<"Enter length : ";
-            cin>>length;
-            cout<<"Enter breath : ";
-            cin>>breath;
-            cout<<"Enter height : ";
-            cin>>height;
-        }
-        Box(float x,float y,float z)
-        {
-            length=x;
-            breath=y;
-            height=z;
-        }
-        void setlength(float x){ length=x; }
-        void setbreath(float x){ breath=x; }
-        void setheight(float x){ height=x; }
-        float getlength(){ return length; }
-        float getbreath(){ return breath; }
-        float getheight(){ return height; }
-        float getvolume(){ return volume; }
-        void findvolume(){ volume=length*breath*height; }
+private:
+    float length;
+    float breath;
+    float height;
+    float volume;
+
+public:
+    Box()
+    {
+        length = 0;
+        breath = 0;
+        height = 0;
+    }
+    Box(float l, float b, float h)
+    {
+        length = l;
+        breath = b;
+        height = h;
+    }
+    void set_box(float l, float b, float h)
+    {
+        length = l;
+        breath = b;
+        height = h;
+    }
+    void set_length(float l) { length = l; }
+    void set_height(float h) { height = h; }
+    void set_breath(float b) { breath = b; }
+    float get_volume() { return volume; }
+    float get_length() { return length; }
+    float get_breath() { return breath; }
+    float get_height() { return height; }
+    void cal_volume()
+    {
+        volume = length * breath * height;
+    }
 };
 
 int main()
 {
-    Box b1,b2(10,20,15);
-    b1.findvolume();
-    b2.findvolume();
-    cout<<"volume of box 1 is "<<b1.getvolume()<<" whose length breath and height is "
-    <<b1.getlength()<<" "<<b1.getbreath()<<" "<<b1.getheight()<<endl;
-    cout<<"volume of box 1 is "<<b2.getvolume()<<" whose length breath and height is "
-    <<b2.getlength()<<" "<<b2.getbreath()<<" "<<b2.getheight();
+    Box b1, b2, b3(5, 6, 3);
+    b2.set_box(8, 9, 5);
+    b1.cal_volume();
+    b2.cal_volume();
+    b3.cal_volume();
+    cout << "volume of b1 box is " << b1.get_volume()
+         << " whose lenght=" << b1.get_length() << " breath=" << b1.get_breath()
+         << " height=" << b1.get_height() << endl;
+    cout << "volume of b2 box is " << b2.get_volume()
+         << " whose lenght=" << b2.get_length() << " breath=" << b2.get_breath()
+         << " height=" << b2.get_height() << endl;
+    cout << "volume of b3 box is " << b3.get_volume()
+         << " whose lenght=" << b3.get_length() << " breath=" << b3.get_breath()
+         << " height=" << b3.get_height() << endl;
+
     return 0;
 }

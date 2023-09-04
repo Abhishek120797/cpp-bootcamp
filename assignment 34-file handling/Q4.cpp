@@ -1,7 +1,7 @@
-#include<iostream>
-#include<fstream>
-#include<string>
-#include<cctype>
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <cctype>
 
 using namespace std;
 
@@ -12,19 +12,19 @@ int main()
     file1.open("text.txt");
     ofstream file2;
     file2.open("text2.txt");
-    
-    while(file1.get(ch))
+
+    while (file1.get(ch))
     {
-        if(isalpha(ch))
+        if (isalpha(ch))
         {
-            if(isupper(ch))
-                ch=tolower(ch);
+            if (isupper(ch))
+                ch = tolower(ch);
             else
-                ch=toupper(ch);
+                ch = toupper(ch);
         }
-        file2<<ch;
+        file2 << ch;
     }
     file1.close();
-    file2.close(); 
+    file2.close();
     return 0;
 }

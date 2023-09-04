@@ -1,33 +1,33 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-class complex
+class Complex
 {
-    private:
-    int imag;
+private:
     int real;
-    public:
-    void input()
+    int img;
+
+public:
+    void set_complex(int real_num, int img_num)
     {
-        cout<<"Enter real number : ";
-        cin>>real;
-        cout<<"Enter imaginary part : ";
-        cin>>imag;
+        real = real_num;
+        img = img_num;
     }
-    void display()
+    void print_complex()
     {
-        cout<<real<<"+"<<imag<<"i"<<endl;
+        cout << real << " + " << img << "i" << endl;
     }
 };
 
 int main()
 {
-    complex num1,num2,num3;
-    num1.input();
-    num2.input();
-    num3.input();
-    num1.display();
-    num2.display();
-    num3.display();
+    Complex c1, c2;
+
+    c1.set_complex(5, 8);
+    c2.set_complex(4, 6);
+
+    c1.print_complex();
+    c2.print_complex();
+
     return 0;
 }

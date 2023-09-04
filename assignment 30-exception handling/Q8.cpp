@@ -1,11 +1,11 @@
 #include <iostream>
 #include <cstring>
 using namespace std;
-bool hasDigit(const char* password) 
+bool hasDigit(const char *password)
 {
     for (int i = 0; password[i] != '\0'; ++i)
     {
-        if (isdigit(password[i])) 
+        if (isdigit(password[i]))
         {
             return true;
         }
@@ -13,12 +13,12 @@ bool hasDigit(const char* password)
     return false;
 }
 
-bool hasSpecialChar(const char* password) 
+bool hasSpecialChar(const char *password)
 {
-    const char* specialChars = "!@#$%^&*()_+{}|:\"<>?-=[]\\;',./~`";
-    for (int i = 0; password[i] != '\0'; ++i) 
+    const char *specialChars = "!@#$%^&*()_+{}|:\"<>?-=[]\\;',./~`";
+    for (int i = 0; password[i] != '\0'; ++i)
     {
-        if (strchr(specialChars, password[i]) != nullptr) 
+        if (strchr(specialChars, password[i]) != nullptr)
         {
             return true;
         }
@@ -26,11 +26,11 @@ bool hasSpecialChar(const char* password)
     return false;
 }
 
-bool hasCapitalLetter(const char* password) 
+bool hasCapitalLetter(const char *password)
 {
-    for (int i = 0; password[i] != '\0'; ++i) 
+    for (int i = 0; password[i] != '\0'; ++i)
     {
-        if (isupper(password[i])) 
+        if (isupper(password[i]))
         {
             return true;
         }
@@ -38,30 +38,30 @@ bool hasCapitalLetter(const char* password)
     return false;
 }
 
-bool isValidPassword(const char* password) 
+bool isValidPassword(const char *password)
 {
     int length = strlen(password);
 
     // Check the length of the password
-    if (length < 6) 
+    if (length < 6)
     {
         throw "Password must have at least 6 characters.";
     }
 
     // Check if the password contains a digit
-    if (!hasDigit(password)) 
+    if (!hasDigit(password))
     {
         throw "Password must contain at least one digit.";
     }
 
     // Check if the password contains a special character
-    if (!hasSpecialChar(password)) 
+    if (!hasSpecialChar(password))
     {
         throw "Password must contain at least one special character.";
     }
 
     // Check if the password contains a capital letter
-    if (!hasCapitalLetter(password)) 
+    if (!hasCapitalLetter(password))
     {
         throw "Password must contain at least one capital letter.";
     }
@@ -69,21 +69,21 @@ bool isValidPassword(const char* password)
     return true;
 }
 
-int main() 
+int main()
 {
     char password[100];
 
-    try 
+    try
     {
         cout << "Enter a password: ";
         cin >> password;
 
-        if (isValidPassword(password)) 
+        if (isValidPassword(password))
         {
             cout << "Password is valid." << endl;
         }
     }
-    catch (const char* errorMessage) 
+    catch (const char *errorMessage)
     {
         cout << "Invalid password: " << errorMessage << endl;
     }

@@ -1,27 +1,30 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-void prime_num(int);
+
+int checkPrime(int);
+
 int main()
 {
-    int num;
-    cout<<"Enter a number : ";
-    cin>>num;
-    prime_num(num);
+    int num, flag = 0;
+    cout << "Enter a number: ";
+    cin >> num;
+    if (checkPrime(num))
+        printf("Prime number");
+    else
+        printf("Not a prime number");
+
     return 0;
 }
-void prime_num(int x)
+
+int checkPrime(int num)
 {
-    int flag=0,i;
-    for(i=2;i<=x/2;i++)
+    if (num == 0 || num == 1)
+        return 0;
+
+    for (int i = 2; i <= num / 2; i++)
     {
-        if(x%i==0)
-        {
-            flag++;
-            break;
-        }
+        if (num % i == 0)
+            return 0;
     }
-    if(flag==1)
-        cout<<x<<" is not prime number";
-    else
-        cout<<x<<" is prime number";
+    return 1;
 }

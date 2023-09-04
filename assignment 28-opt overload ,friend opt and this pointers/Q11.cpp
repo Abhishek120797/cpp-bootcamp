@@ -1,20 +1,21 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
 class Marks
 {
-    private:
-        int mark;
-    public:
-        Marks(){ mark=0; }
-        Marks(int mark){ this->mark=mark; }
-        void setMark(int mark){ this->mark=mark; }
-        int getMark(){ return mark; }
-        void print(){ cout<<"mark = "<<mark<<endl; }
-        Marks* operator->()
-        {
-            return this;
-        }
+private:
+    int mark;
+
+public:
+    Marks() { mark = 0; }
+    Marks(int mark) { this->mark = mark; }
+    void setMark(int mark) { this->mark = mark; }
+    int getMark() { return mark; }
+    void print() { cout << "mark = " << mark << endl; }
+    Marks *operator->()
+    {
+        return this;
+    }
 };
 
 int main()

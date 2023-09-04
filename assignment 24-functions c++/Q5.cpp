@@ -1,35 +1,33 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-void fab(int);
+
+bool check_fibb_term(int);
+
 int main()
 {
     int num;
-    cout<<"Enter a number : ";
-    cin>>num;
-    fab(num);
+    cout << "Enter a number: ";
+    cin >> num;
+    if (check_fibb_term(num))
+        cout << num << " is fibonacci term";
+    else
+        cout << num << " is not fibonacci term";
     return 0;
 }
 
-void fab(int x)
+bool check_fibb_term(int num)
 {
-    int i,t1=-1,t2=1,tn,flag=0;
-    for(i=-1;i<=x;i++)
+    int t1 = 0, t2 = 1, t3;
+    if (num == 0 || num == 1)
+        return 1;
+
+    while (t2 <= num)
     {
-        tn=t1+t2;
-        t1=t2;
-        t2=tn;
-        if(tn==x)
-        {
-            flag=1;
-            break;
-        }
+        if (t2 == num)
+            return 1;
+        t3 = t1 + t2;
+        t1 = t2;
+        t2 = t3;
     }
-    if(flag==0)
-    {
-        cout<<"number is not febonacci term";
-    }
-    else
-    {
-        cout<<"number is febonacci term";
-    }
+    return 0;
 }

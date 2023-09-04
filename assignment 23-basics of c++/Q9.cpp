@@ -1,14 +1,12 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
+
 int main()
 {
-    int num_1,num_2;
-    cout<<"Enter two numbers : ";
-    cin>>num_1;
-    cin>>num_2;
-    if(num_1>=num_2)
-        cout<<num_1<<" is greater number";
-    else
-        cout<<num_2<<" is greater number";
+    int num1, num2, max;
+    cout << "Enter two numbers: ";
+    cin >> num1 >> num2;
+    max = num1 >= num2 ? num1 : num2;
+    cout << "max number is " << max;
     return 0;
 }

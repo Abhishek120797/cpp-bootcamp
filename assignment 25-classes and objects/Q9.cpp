@@ -1,36 +1,29 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
 class Circle
 {
-    private:
+private:
     float redius;
     float area;
-    public:
-    void set()
-    {
-        cout<<"Enter redius : ";
-        cin>>redius;
-    }
-    float get_redius()
-    {
-        return redius;
-    }
-    float get_area()
-    {
-        return area;
-    }
-    void farea()
-    {
-        area=3.14*redius*redius;
-    }
+
+public:
+    void set_redius(float r) { redius = r; }
+    void cal_area() { area = redius * redius * 3.14; }
+    float get_redius() { return redius; }
+    float get_area() { return area; }
 };
 
 int main()
 {
     Circle c1;
-    c1.set();
-    c1.farea();
-    cout<<"Area of circle is "<<c1.get_area()<<" whose redius is "<<c1.get_redius();
+    float r;
+    cout << "Enter redius of circle: ";
+    cin >> r;
+    c1.set_redius(r);
+    c1.cal_area();
+    cout << "Area of circle is " << c1.get_area() << " whose redius is "
+         << c1.get_redius();
+
     return 0;
 }

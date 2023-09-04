@@ -1,20 +1,28 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-int add(int,int);
-float add(float,float);
+
+float add(float, float);
+int add(int, int);
+
 int main()
 {
-    float a,b;
-    cout<<"Enter two numbers : ";
-    cin>>a>>b;
-    cout<<"sum of number is "<<add(a,b);
+    int a, b;
+    float c, d;
+    cout << "Enter two float number: ";
+    cin >> c >> d;
+    cout << "sum is " << add(c, d) << endl;
+    cout << "Enter two int number ";
+    cin >> a >> b;
+    cout << "sum is " << add(a, b) << endl;
     return 0;
 }
-int add(int x,int y)
+
+float add(float num1, float num2)
 {
-    return x+y;
+    return num1 + num2;
 }
-float add(float x,float y)
+
+int add(int num1, int num2)
 {
-    return x+y;
+    return num1 + num2;
 }
