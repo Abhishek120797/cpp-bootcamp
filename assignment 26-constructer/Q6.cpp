@@ -1,3 +1,6 @@
+// Define a class student and write a program to enter student details using constructor
+// and define member function to display all the details
+
 #include <iostream>
 #include <string>
 using namespace std;

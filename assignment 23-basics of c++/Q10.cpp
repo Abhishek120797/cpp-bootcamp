@@ -1,3 +1,5 @@
+// Write a C++ program to add all the numbers of an array of size 10.
+
 #include <iostream>
 using namespace std;
 

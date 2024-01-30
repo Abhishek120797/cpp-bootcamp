@@ -1,3 +1,5 @@
+// Define a function to calculate x raised to the power y
+
 #include <iostream>
 using namespace std;
 int calPower(int, int);

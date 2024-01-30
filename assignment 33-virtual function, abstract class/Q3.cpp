@@ -1,3 +1,6 @@
+// Using the concept of pointers, write a function that swaps the private data values of
+// two objects of the same class type
+
 #include <iostream>
 
 using namespace std;

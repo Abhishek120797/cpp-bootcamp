@@ -1,3 +1,6 @@
+// Define a class ReverseNumber and define an instance member function to find
+// Reverse of a Number using class.
+
 #include <iostream>
 using namespace std;
 

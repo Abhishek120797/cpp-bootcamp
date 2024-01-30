@@ -1,3 +1,6 @@
+// Write a program to copy the contents of one text file to another while changing the
+// case of every alphabet.
+
 #include <iostream>
 #include <fstream>
 #include <string>

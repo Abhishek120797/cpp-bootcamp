@@ -1,3 +1,10 @@
+// Write a C++ program to implement the following class hierarchy:
+// Student: id, name
+// StudentExam (derived from Student): Marks of 6 subjects
+// StudentResult (derived from StudentExam) : percentage
+// Define appropriate functions to accept and display details.
+// Create 'n' objects of the StudentResult class and display the marklist.
+
 #include <iostream>
 #include <string>
 

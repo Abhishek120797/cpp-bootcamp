@@ -1,3 +1,8 @@
+//  Create a base class called Photon. Use this class to store double type value of
+// wavelength that could be used to calculate photon energy. Create class
+// calculate_photonEnergy which will photon energy.
+// Using these classes, calculate photon energy.
+
 #include <iostream>
 #include <cmath>
 

@@ -1,3 +1,5 @@
+// Define a class Cube and calculate Volume of Cube and initialise it using constructor
+
 #include <iostream>
 using namespace std;
 

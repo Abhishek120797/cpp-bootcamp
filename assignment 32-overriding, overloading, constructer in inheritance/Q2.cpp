@@ -1,3 +1,5 @@
+// Define a class Rectangle and overload area function for different types of data type.
+
 #include <iostream>
 using namespace std;
 

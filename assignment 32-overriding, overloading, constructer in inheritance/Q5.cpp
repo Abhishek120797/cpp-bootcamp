@@ -1,3 +1,7 @@
+// Define a class A having multiple constructors. Define another class B derived from
+// class A. Create derived class constructors and show use of constructor in this single
+// inheritance
+
 #include <iostream>
 
 using namespace std;

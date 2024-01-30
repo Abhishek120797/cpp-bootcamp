@@ -1,3 +1,10 @@
+// Consider two base classes
+// worker(int code, char name, float salary),
+// officer(float DA, HRA)
+// class manger(float TA(is 10% of salary), gross salary) is derived from both base
+// classes.
+// Write necessary member functions.
+
 #include <iostream>
 #include <string>
 

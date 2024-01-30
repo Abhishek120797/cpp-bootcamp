@@ -1,3 +1,6 @@
+// Write a C++ program to calculate the area of triangle, rectangle and circle using
+// constructor overloading. The program should be menu driven.
+
 #include <iostream>
 #include <cmath>
 using namespace std;

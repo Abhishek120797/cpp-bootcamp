@@ -1,3 +1,5 @@
+// Define a function to swap data of two int variables using call by reference
+
 #include <iostream>
 using namespace std;
 void swap(int &, int &);

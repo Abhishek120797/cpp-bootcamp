@@ -1,3 +1,5 @@
+// Write a C++ program to open an output file 'a.txt' and append data to it.
+
 #include <iostream>
 #include <fstream>
 #include <string>

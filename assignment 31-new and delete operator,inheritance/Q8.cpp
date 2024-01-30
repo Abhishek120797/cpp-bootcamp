@@ -1,3 +1,12 @@
+// In a bank, different customers have savings account. Some customers may
+// have taken a loan from the bank. So bank always maintain information about
+// bank depositors and borrowers.
+// Design a Base class Customer (name, phone-number). Derive a class
+// Depositor(accno, balance) from Customer.
+// Again, derive a class Borrower (loan-no, loan-amt) from Depositor.
+// Write necessary member functions to read and display the details of ‘n’
+// customers.
+
 #include <iostream>
 #include <string>
 

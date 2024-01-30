@@ -1,3 +1,6 @@
+// Define a class Addition that can add 2 or 3 numbers of different data types using
+// function overloading.
+
 #include <iostream>
 using namespace std;
 

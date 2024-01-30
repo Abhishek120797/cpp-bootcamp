@@ -1,3 +1,5 @@
+// Write a C++ program to merge the two files.
+
 #include <iostream>
 #include <fstream>
 #include <string>

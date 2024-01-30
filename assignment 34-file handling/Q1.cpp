@@ -1,3 +1,6 @@
+// Write a C++ program to create a file and print “File created successfully” and throw
+// an error if file is not created
+
 #include <iostream>
 #include <fstream>
 #include <string>
