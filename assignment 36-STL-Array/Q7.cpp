@@ -1,27 +1,29 @@
-#include<iostream>
-#include<array>
-#include<iterator>
-#include<tuple>
-#include<algorithm>
+// Sort an array in ascending order using sort() function in C++ STL
+
+#include <iostream>
+#include <array>
+#include <iterator>
+#include <tuple>
+#include <algorithm>
 using namespace std;
 
 int main()
 {
-    array <int,10>num;
-    cout<<"Enter 10 numbers : ";
-    for(auto &i: num)
+    array<int, 10> num;
+    cout << "Enter 10 numbers : ";
+    for (auto &i : num)
     {
-        cin>>i;
+        cin >> i;
     }
-    for(auto i: num)
+    for (auto i : num)
     {
-        cout<<i<<" ";
+        cout << i << " ";
     }
-    cout<<endl;
-    sort(num.begin(),num.end());
-    for(auto i: num)
+    cout << endl;
+    sort(num.begin(), num.end());
+    for (auto i : num)
     {
-        cout<<i<<" ";
+        cout << i << " ";
     }
     return 0;
 }
